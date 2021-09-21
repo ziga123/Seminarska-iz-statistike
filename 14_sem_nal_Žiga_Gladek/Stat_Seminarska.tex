@@ -123,6 +123,46 @@ Tu se že nekoliko vidi, kako bo razpršenost padala, ko vzorec povečujemo. Pri
 
 \section*{2. naloga: TempPulz}
 
+\subsubsection*{Točka a)} Dane imamo odčitke telesnih temperatur in pulzov $65$ moških in $65$ žensk. Pri tem pa dodatno predpostavljamo, da sta telesna temperatura in pulz pri moških in pri ženskah porazdeljena normalno. Seveda ni nujno, da so te normalne porazdelitve enake. Za namene naloge se bomo omejili na obravnavo telesnih temperatur. Naj bo telesna temperatura moških porazdeljena $\sim N(\mu_1, \sigma^2_1)$, telesna temperatura žensk pa $\sim N(\mu_2,\sigma^2_2)$. Poleg tega označimo z $X_i$ odčitek telesne temperature za $i$-tega moškega in z $Y_j$ odčitek telesne temperature za $j$-to žensko. Skozi celoten potek bomo predpostavljali še, da so vse meritve med seboj neodvisne. Za začetek ocenimo povprečje in standardni odklon za telesno temperaturo žensk in moških posebej. Za oceni povprečij vzamemo kar empirični povprečji odčitkov:
+\[
+\hat{\mu}_1 = \frac{1}{65}\sum_{i=1}^{65} X_i, \quad \hat{\mu}_2 = \frac{1}{65}\sum_{j=1}^{65} Y_j.
+\]
+V programu to lahko izračunamo z uporabo funkcije \emph{mean} na ustreznih seznamih. Dobimo $\hat{\mu}_1 \doteq 98.10462^{\circ}F$ in $\hat{\mu}_2 \doteq 98.39385^{\circ}F$. Med Celzijevimi in Fahrenheitovimi stopinjami lahko prehajamo s pomočjo formule $y = 5(x-32)/9$, kjer $x^{\circ}F = y^{\circ}C$. V Celzijevih stopinjah sta oceni torej enaki $\hat{\mu}_1 \doteq 36.72479^{\circ}C$ in $\hat{\mu}_2 \doteq 36.88547^{\circ}C$.
+
+Ocenimo še standardna odklona $\sigma_1$ in $\sigma_2$. Če se osredotočimo na odčitke temperatur pri moških, znamo to znova oceniti z empiričnim standardnim odklonom, vendar pa ta ocena ni nepristranska. Iz predavanj vemo, da sta nepristranski oceni enaki
+\[
+\hat{\sigma}_1 = \sqrt{\frac{1}{65-1}\sum_{i=1}^{65}(X_i - \hat{\mu}_1)^2}, \quad \hat{\sigma}_2 = \sqrt{\frac{1}{65-1}\sum_{j=1}^{65}(Y_j - \hat{\mu}_2)^2}.
+\]
+Dobimo $\hat{\sigma}_1 \doteq 0.69876^{\circ}F = 0.38819^{\circ}C$ in $\hat{\sigma}_2 \doteq 0.74349^{\circ}F = 0.41305^{\circ}C$.
+\subsubsection*{Točka b)} Sedaj bomo določili $95\%$ interval zaupanja za $\mu_1$ in $\mu_2$. Postavimo stopnjo tveganja $\alpha = 0,05$ in postavimo pogoj zaupanja
+\[
+P(|\hat{\mu}_1 - \mu_1| \leq c) = 1 - \alpha.
+\]
+Ker so $X_i$ vsi enako porazdeljeni in neodvisni, velja $\hat{\mu}_1 \sim N(\mu_1, (\frac{\sigma_1}{65})^2)$. Označimo $se_1 = \frac{\sigma_1}{65}$. Potem velja $\frac{\hat{\mu}_1 - \mu_1}{se_1} \sim N(0,1)$. Od tu lahko nadaljujemo na vsaj dva načina. Problem je, ker $\sigma_1$ ne poznamo, vendar pa na njegovi podlagi vseeno lahko določimo interval zaupanja in šele zatem uporabimo približek. Najprej izračunamo
+\[
+P(|\hat{\mu}_1 - \mu_1| \leq c) = P\left(\frac{|\hat{\mu}_1 - \mu_1|}{se_1} \leq \frac{c}{se_1}\right) = 2\Phi\left(\frac{c}{se_1}\right) - 1.
+\]
+Iz pogoja zaupanja dobimo, da je $c = se_1\cdot\Phi^{-1}(1 - \frac{\alpha}{2})$. Ker pa $se_1$ ne poznamo, ga na tej točki zamenjamo z nepristransko oceno $\hat{se_1} = \frac{\hat{\sigma}_1}{65}$.
+Tako smo dobili aproksimativni $95\%$ interval zaupanja
+\[\left[\hat{\mu}_1 - \hat{se}_1\Phi^{-1}\left(1 - \frac{\alpha}{2}\right),  \hat{\mu}_1 + \hat{se}_1\Phi^{-1}\left(1 - \frac{\alpha}{2}\right)\right] = \left[\hat{\mu}_1 - \hat{se}_11,96,  \hat{\mu}_1 + \hat{se}_1 1,96\right],\]
+ki pa je asimptotično eksakten. Popolnoma analogno dobimo tak interval zaupanja za $\mu_2$. Program nam pove, da je za $\mu_1$ ta interval enak približno $[97.93474^{\circ}F, 98.27449^{\circ}F] = [36.63041^{\circ}C, 36.81916^{\circ}C]$, za $\mu_2$ pa približno $[98.21309^{\circ}F, 98.57459^{\circ}F] = [36.78505^{\circ}C, 36.98588^{\circ}C]$.
+
+Druga možnost je, da upoštevamo $\frac{\hat{\mu}_1 - \mu}{\hat{se}_1} \sim Student(65-1)$.
+\[
+P(|\hat{\mu}_1 - \mu_1| \leq c) = P\left(\frac{|\hat{\mu}_1 - \mu_1|}{\hat{se}_1} \leq \frac{c}{\hat{se}_1}\right) = 2F_{Student(64)}\left(\frac{c}{\hat{se}_1}\right) - 1.
+\]
+Iz pogoja zaupanja dobimo $c = \hat{se}_1\cdot F^{-1}_{Student(64)}(1 - \frac{\alpha}{2}) = 2 \cdot\hat{se}_1$. V zadnjem enačaju smo upoštevali, da je $F^{-1}_{Student(64)}(1 - \frac{\alpha}{2}) \doteq 2,00$. V resnici smo uporabili kvantil pri $60$ prostostnih stopnjah, ki je za nas dovolj dober približek. Za razliko od prejšnjega intervala, je ta eksakten. Za $\mu_1$ je približno enak $[97.93128^{\circ}F, 98.27796^{\circ}F] = [36.62849^{\circ}C, 36.82109^{\circ}C]$, za $\mu_2$ pa približno $[98.20941^{\circ}F, 98.57828^{\circ}F] =[36.78301^{\circ}C, 36.98793^{\circ}C]$.
+
+\subsubsection*{Točka c)} Na podlagi danih podatkov bomo sedaj preizkusili domnevo, da imajo moški in ženske v povprečju enako telesno temperaturo. Preizkusili jo bomo pri stopnjah tveganja $0,05$ in $0,01$. Ničelna domneva se torej glasi $H_0: \mu_1 = \mu_2$. Smiselna testna statistika je na primer $\hat{\mu}_1 - \mu_2$, lahko pa bi vzeli tudi $\hat{\mu}_2 - \mu_1$. Porazdelitve $\hat{\mu}_1$ ne poznamo, saj ne poznamo $\sigma_1$, lahko pa znova upoštevamo, da je $\frac{\hat{\mu}_1 - \mu_1}{\hat{se}_1} \sim Student(64)$. Če torej upoštevamo ničelno domnevo, je
+\[
+T = \frac{\hat{\mu}_1 - \mu_2}{\hat{se}_1} \sim Student(64).
+\]
+$T$ vzamemo za novo testno statistiko. Na podlagi te sedaj lahko izvedemo obojestranski $T$-preizkus, kar pomeni, da bomo domnevo $H_0$ preizkusili proti alternativni domnevi $H_1 : \mu_1 \neq \mu_2$. Naj bo $\alpha = 0,05$. Ničelno domnevo bomo zavrnili, če bo na danih podatkih $|T| \geq F^{-1}_{Student(64)}(1 - \frac{\alpha}{2}) \doteq 2,00$. Pri danih podatkih je $|T| \doteq 3.33715$, zato domnevo zavrnemo. Pri $\alpha = 0,01$ je $F^{-1}_{Student(64)}(1 - \frac{\alpha}{2}) \doteq 2.66$, zato tudi v tem primeru zavrnemo. Dodatno, če za $T$ vzamemo $\frac{\hat{\mu}_2 - \mu_1}{\hat{se}_2}$, potem dobimo $|T| \doteq 2.91998$, torej bi tudi s to testno statistiko domnevo zavrnili pri obeh stopnjah tveganja. 
+
+Lahko poskusimo še nekaj. Na podlagi ocen iz prvih dveh točk namreč pričakujemo, da je povprečna telesna temperatura žensk kvečjemu večja od povprečne telesne temperature moških, zato bi se morda bolj splačalo narediti enostranski test. Zato lahko postavimo novo alternativno domnevo $H_1^+ : \mu_2 > \mu_1$. Vzemimo spet testno statistiko $T = \frac{\hat{\mu}_1 - \mu_2}{\hat{se}_1}$. Pri stopnji tveganja $\alpha$ bomo $H_0$ tokrat zavrnili, če bo $T \geq F^{-1}_{Student(64)}(1 - \alpha)$. Pri $\alpha = 0,05$ je $F^{-1}_{Student(64)}(1 - \alpha) \doteq 1,67$, pri $\alpha = 0,01$ pa $F^{-1}_{Student(64)}(1 - \alpha) \doteq 2,39$. Za dane podatke je $T = - 3,33715$, torej domnevo sprejmemo pri obeh stopnjah tveganja. Podobno lahko sestavimo še enostranski test za testno statistiko $\frac{\hat{\mu}_2 - \mu_1}{\hat{se}_2}$ in ugotovimo popolnoma enako. Razlika je namreč le to, da pri isti alternativni domnevi kot prej tu zavrnemo $H_0$ takrat, ko je $\frac{\hat{\mu}_2 - \mu_1}{\hat{se}_2} \leq -F^{-1}_{Student(64)}(1 - \alpha)$, $\frac{\hat{\mu}_2 - \mu_1}{\hat{se}_2}$ pa je na danih podatkih približno $3,33715$.
+
+
+
 \begin{thebibliography}{99}
 \bibitem{Rice} J. A.~Rice, \emph{Mathematical Statistics and Data Analysis, Third Edition}, Thomson Brooks/Cole, Duxbury, 2007
 \end{thebibliography}
