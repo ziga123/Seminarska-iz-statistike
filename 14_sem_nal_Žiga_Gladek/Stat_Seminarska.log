@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2021.2.8)  23 SEP 2021 00:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2021.2.8)  23 SEP 2021 00:40
 entering extended mode
 **./Stat_Seminarska.tex
 (Stat_Seminarska.tex
@@ -188,39 +188,39 @@ n/12 975) []
  []
 
 [2]
-<./slike//Intervali.png, id=21, 448.67625pt x 295.1025pt>
+<./slike//Intervali.png, id=20, 448.67625pt x 295.1025pt>
 File: ./slike//Intervali.png Graphic file (type png)
 <use ./slike//Intervali.png>
 Package pdftex.def Info: ./slike//Intervali.png  used on input line 61.
 (pdftex.def)             Requested size: 314.07123pt x 206.57033pt.
  [3 <./slike//Intervali.png>]
-<./slike//SE_200_primerjava.png, id=25, 433.62pt x 299.61937pt>
+<./slike//SE_200_primerjava.png, id=24, 433.62pt x 299.61937pt>
 File: ./slike//SE_200_primerjava.png Graphic file (type png)
 <use ./slike//SE_200_primerjava.png>
 Package pdftex.def Info: ./slike//SE_200_primerjava.png  used on input line 67.
 
 (pdftex.def)             Requested size: 303.53192pt x 209.73212pt.
-<./slike//Intervali_800.png, id=26, 442.65375pt x 292.84406pt>
+<./slike//Intervali_800.png, id=25, 442.65375pt x 292.84406pt>
 File: ./slike//Intervali_800.png Graphic file (type png)
 <use ./slike//Intervali_800.png>
 Package pdftex.def Info: ./slike//Intervali_800.png  used on input line 78.
 (pdftex.def)             Requested size: 309.8555pt x 204.98944pt.
  [4 <./slike//SE_200_primerjava.png>]
-<./slike//SE_800_primerjava.png, id=30, 446.41782pt x 298.86656pt>
+<./slike//SE_800_primerjava.png, id=29, 446.41782pt x 298.86656pt>
 File: ./slike//SE_800_primerjava.png Graphic file (type png)
 <use ./slike//SE_800_primerjava.png>
 Package pdftex.def Info: ./slike//SE_800_primerjava.png  used on input line 85.
 
 (pdftex.def)             Requested size: 312.49033pt x 209.20515pt.
  [5 <./slike//Intervali_800.png>]
-<./slike//stand_napaka_graf1.png, id=34, 435.87843pt x 306.39468pt>
+<./slike//stand_napaka_graf1.png, id=33, 435.87843pt x 306.39468pt>
 File: ./slike//stand_napaka_graf1.png Graphic file (type png)
 <use ./slike//stand_napaka_graf1.png>
 Package pdftex.def Info: ./slike//stand_napaka_graf1.png  used on input line 93
 .
 (pdftex.def)             Requested size: 305.11282pt x 214.47481pt.
  [6 <./slike//SE_800_primerjava.png>]
-<./slike//stand_napaka_graf2.png, id=38, 468.24937pt x 328.22626pt>
+<./slike//stand_napaka_graf2.png, id=37, 468.24937pt x 328.22626pt>
 File: ./slike//stand_napaka_graf2.png Graphic file (type png)
 <use ./slike//stand_napaka_graf2.png>
 Package pdftex.def Info: ./slike//stand_napaka_graf2.png  used on input line 97
@@ -238,7 +238,7 @@ Overfull \hbox (9.05658pt too wide) detected at line 148
 [] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 ;
  []
 
-[10]
+
 Overfull \hbox (1.11351pt too wide) in paragraph at lines 160--162
 \OT1/cmr/m/n/12 V nasem primer $\OML/cmm/m/it/12 []$ \OT1/cmr/m/n/12 ne poz-n
 amo, zato ra-bimo zanj pri-blizek, ki pa bo uposteval
@@ -250,18 +250,18 @@ Overfull \hbox (3.44684pt too wide) in paragraph at lines 160--162
 h takih po-razdelitev,
  []
 
-[11] [12] [13] [14]
-<./slike//pulzi_studentov.png, id=66, 422.32782pt x 294.34969pt>
+[10] [11] [12] [13]
+<./slike//pulzi_studentov.png, id=63, 422.32782pt x 294.34969pt>
 File: ./slike//pulzi_studentov.png Graphic file (type png)
 <use ./slike//pulzi_studentov.png>
 Package pdftex.def Info: ./slike//pulzi_studentov.png  used on input line 246.
 (pdftex.def)             Requested size: 295.62746pt x 206.04337pt.
- [15 <./slike//pulzi_studentov.png>] [16] [17] [18]
+ [14] [15 <./slike//pulzi_studentov.png>] [16] [17] [18]
 (Stat_Seminarska.aux) ) 
 Here is how much of TeX's memory you used:
  2029 strings out of 479623
  30191 string characters out of 2865098
- 317037 words of memory out of 3000000
+ 318037 words of memory out of 3000000
  19200 multiletter control sequences out of 15000+200000
  412841 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -283,7 +283,7 @@ type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Žiga/AppData/Local/Programs/MiKTeX
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Žiga/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Žiga/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Stat_Seminarska.pdf (18 pages, 508425 bytes).
+Output written on Stat_Seminarska.pdf (18 pages, 508117 bytes).
 PDF statistics:
  127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
