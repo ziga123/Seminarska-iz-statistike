@@ -20,7 +20,7 @@ V tem dokumentu so povzete obravnave nalog, ki sem jih preučeval v sklopu predm
 
 \section*{1. naloga: Kibergrad}
 
-\subsubsection*{Točka a)} Najprej moramo vzeti enostavni slučajni vzorec $200$ družin in oceniti delež družin v Kibergradu, v katerih vodja gospodinjstva nima mature. To pomeni, da je v tabeli takega gospodinjstva stopnja izobrazbe $\leq 38$. Pravi delež bomo označili s $p$. Enostavni slučajni vzorec lahko v programu dobimo s pomočjo ukaza \emph{sample}. Nepristranska ocena za $p$ je:
+\subsubsection*{Točka a)} Ustrezne datoteke za to in ostale točke pri tej nalogi se nahajajo v datoteki \textbf{Kibergrad.ipynb}. Najprej moramo vzeti enostavni slučajni vzorec $200$ družin in oceniti delež družin v Kibergradu, v katerih vodja gospodinjstva nima mature. To pomeni, da je v tabeli takega gospodinjstva stopnja izobrazbe $\leq 38$. Pravi delež bomo označili s $p$. Enostavni slučajni vzorec lahko v programu dobimo s pomočjo ukaza \emph{sample}. Nepristranska ocena za $p$ je:
 \[
 \hat{p} = \frac{\text{št. gospodinjstev v vzorcu brez mature}}{200}.
 \]
@@ -124,7 +124,7 @@ Tu se že nekoliko vidi, kako bo razpršenost padala, ko vzorec povečujemo. Pri
 
 \section*{2. naloga: TempPulz}
 
-\subsubsection*{Točka a)} Dane imamo odčitke telesnih temperatur in pulzov $65$ moških in $65$ žensk. Pri tem pa dodatno predpostavljamo, da sta telesna temperatura in pulz pri moških in pri ženskah porazdeljena normalno. Seveda ni nujno, da so te normalne porazdelitve enake. Za namene naloge se bomo omejili na obravnavo telesnih temperatur. Naj bo telesna temperatura moških porazdeljena $\sim N(\mu_1, \sigma^2_1)$, telesna temperatura žensk pa $\sim N(\mu_2,\sigma^2_2)$. Poleg tega označimo z $X_i$ odčitek telesne temperature za $i$-tega moškega in z $Y_j$ odčitek telesne temperature za $j$-to žensko. Skozi celoten potek bomo predpostavljali še, da so vse meritve med seboj neodvisne. Za začetek ocenimo povprečje in standardni odklon za telesno temperaturo žensk in moških posebej. Za oceni povprečij vzamemo kar empirični povprečji odčitkov:
+\subsubsection*{Točka a)} Ustrezne datoteke za to in ostale točke pri tej nalogi se nahajajo v datoteki \textbf{TempPulz.ipynb}. Dane imamo odčitke telesnih temperatur in pulzov $65$ moških in $65$ žensk. Pri tem pa dodatno predpostavljamo, da sta telesna temperatura in pulz pri moških in pri ženskah porazdeljena normalno. Seveda ni nujno, da so te normalne porazdelitve enake. Za namene naloge se bomo omejili na obravnavo telesnih temperatur. Naj bo telesna temperatura moških porazdeljena $\sim N(\mu_1, \sigma^2_1)$, telesna temperatura žensk pa $\sim N(\mu_2,\sigma^2_2)$. Poleg tega označimo z $X_i$ odčitek telesne temperature za $i$-tega moškega in z $Y_j$ odčitek telesne temperature za $j$-to žensko. Skozi celoten potek bomo predpostavljali še, da so vse meritve med seboj neodvisne. Za začetek ocenimo povprečje in standardni odklon za telesno temperaturo žensk in moških posebej. Za oceni povprečij vzamemo kar empirični povprečji odčitkov:
 \[
 \hat{\mu}_1 = \frac{1}{65}\sum_{i=1}^{65} X_i, \quad \hat{\mu}_2 = \frac{1}{65}\sum_{j=1}^{65} Y_j.
 \]
@@ -199,7 +199,7 @@ Prostostne stopnje so take kot so, ker je $\hat{\mu}_1 - \hat{\mu}_2$ povprečje
 
 \section*{3. naloga: Pulz}
 
-\subsubsection*{Točka a)} Dana je tabela meritev pulzov posameznih študentov. Vsakemu študentu so pulz izmerili dvakrat, nekateri od njih pa so bili med obema meritvama fizično obremenjeni. Zanima nas, ali je obremenitev pri študentih, ki so jo imeli, vplivala na spremembo pulza. Mislimo si, da vse prve meritve pulzov prihajajo iz neke porazdelitve s povprečjem $\mu_1$ in varianco $\sigma_1^2$, vse druge pa iz neke porazdelitve s povprečjem $\mu_2$ in z varianco $\sigma_2^2$. V luči tega lahko ničelno domnevo postavimo kot $H_0 : \mu_1 = \mu_2$. Označimo z $X_i$ prvo meritev pulza $i$-tega študenta z obremenitvijo, z $Y_i$ pripadajočo drugo meritev in z $n$ število študentov, ki so bili deležni obremenitve. V našem primeru je $n = 46$. Predpostavili bomo še, da so $X_i$ paroma neodvisne, da so $Y_i$ paroma neodvisne, in da sta $X_i$ in $Y_j$ za $i \neq j$ neodvisni. Smiselna testna statistika je nato $\hat{\mu}_1 - \hat{\mu}_2$, kjer sta
+\subsubsection*{Točka a)} Ustrezne datoteke za to in ostale točke pri tej nalogi se nahajajo v datoteki \textbf{Pulz.ipynb}. Dana je tabela meritev pulzov posameznih študentov. Vsakemu študentu so pulz izmerili dvakrat, nekateri od njih pa so bili med obema meritvama fizično obremenjeni. Zanima nas, ali je obremenitev pri študentih, ki so jo imeli, vplivala na spremembo pulza. Mislimo si, da vse prve meritve pulzov prihajajo iz neke porazdelitve s povprečjem $\mu_1$ in varianco $\sigma_1^2$, vse druge pa iz neke porazdelitve s povprečjem $\mu_2$ in z varianco $\sigma_2^2$. V luči tega lahko ničelno domnevo postavimo kot $H_0 : \mu_1 = \mu_2$. Označimo z $X_i$ prvo meritev pulza $i$-tega študenta z obremenitvijo, z $Y_i$ pripadajočo drugo meritev in z $n$ število študentov, ki so bili deležni obremenitve. V našem primeru je $n = 46$. Predpostavili bomo še, da so $X_i$ paroma neodvisne, da so $Y_i$ paroma neodvisne, in da sta $X_i$ in $Y_j$ za $i \neq j$ neodvisni. Smiselna testna statistika je nato $\hat{\mu}_1 - \hat{\mu}_2$, kjer sta
 \[
 \hat{\mu}_1 = \frac{1}{n}\sum_{i=1}^nX_i, \quad
 \hat{\mu}_2 = \frac{1}{n}\sum_{i=1}^nY_i.
