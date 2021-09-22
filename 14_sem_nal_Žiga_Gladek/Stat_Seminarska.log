@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2021.2.8)  21 SEP 2021 19:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2021.2.8)  22 SEP 2021 13:59
 entering extended mode
 **./Stat_Seminarska.tex
 (Stat_Seminarska.tex
@@ -84,6 +84,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
+(C:\Users\Žiga\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
 (C:\Users\Žiga\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -117,20 +125,20 @@ File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
 ) (Stat_Seminarska.aux)
 \openout1 = `Stat_Seminarska.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 (C:\Users\Žiga\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -153,7 +161,19 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Overfull \hbox (9.35574pt too wide) in paragraph at lines 17--18
+LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
+
+
+(C:\Users\Žiga\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
+
+
+(C:\Users\Žiga\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (9.35574pt too wide) in paragraph at lines 18--19
 \OT1/cmr/m/n/10.95 v sklopu pred-meta statis-tika na pro-gramu Matem-atika UN. 
 Pri resevanju
  []
@@ -161,7 +181,7 @@ Pri resevanju
 [1
 
 {C:/Users/Žiga/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (49.9274pt too wide) in paragraph at lines 43--45
+Overfull \hbox (49.9274pt too wide) in paragraph at lines 44--46
 \OT1/cmr/m/n/12 pod-lagi tabele kvan-tilov Stu-den-tove po-razdelitve uposteva
 li, da je $\OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (0\OML/cmm/m/it/12 ; \OT1/cmr/m/
 n/12 975) []
@@ -171,80 +191,94 @@ n/12 975) []
 <./slike//Intervali.png, id=21, 448.67625pt x 295.1025pt>
 File: ./slike//Intervali.png Graphic file (type png)
 <use ./slike//Intervali.png>
-Package pdftex.def Info: ./slike//Intervali.png  used on input line 60.
+Package pdftex.def Info: ./slike//Intervali.png  used on input line 61.
 (pdftex.def)             Requested size: 314.07123pt x 206.57033pt.
  [3 <./slike//Intervali.png>]
 <./slike//SE_200_primerjava.png, id=25, 433.62pt x 299.61937pt>
 File: ./slike//SE_200_primerjava.png Graphic file (type png)
 <use ./slike//SE_200_primerjava.png>
-Package pdftex.def Info: ./slike//SE_200_primerjava.png  used on input line 66.
+Package pdftex.def Info: ./slike//SE_200_primerjava.png  used on input line 67.
 
 (pdftex.def)             Requested size: 303.53192pt x 209.73212pt.
 <./slike//Intervali_800.png, id=26, 442.65375pt x 292.84406pt>
 File: ./slike//Intervali_800.png Graphic file (type png)
 <use ./slike//Intervali_800.png>
-Package pdftex.def Info: ./slike//Intervali_800.png  used on input line 77.
+Package pdftex.def Info: ./slike//Intervali_800.png  used on input line 78.
 (pdftex.def)             Requested size: 309.8555pt x 204.98944pt.
  [4 <./slike//SE_200_primerjava.png>]
 <./slike//SE_800_primerjava.png, id=30, 446.41782pt x 298.86656pt>
 File: ./slike//SE_800_primerjava.png Graphic file (type png)
 <use ./slike//SE_800_primerjava.png>
-Package pdftex.def Info: ./slike//SE_800_primerjava.png  used on input line 84.
+Package pdftex.def Info: ./slike//SE_800_primerjava.png  used on input line 85.
 
 (pdftex.def)             Requested size: 312.49033pt x 209.20515pt.
  [5 <./slike//Intervali_800.png>]
 <./slike//stand_napaka_graf1.png, id=34, 435.87843pt x 306.39468pt>
 File: ./slike//stand_napaka_graf1.png Graphic file (type png)
 <use ./slike//stand_napaka_graf1.png>
-Package pdftex.def Info: ./slike//stand_napaka_graf1.png  used on input line 92
+Package pdftex.def Info: ./slike//stand_napaka_graf1.png  used on input line 93
 .
 (pdftex.def)             Requested size: 305.11282pt x 214.47481pt.
  [6 <./slike//SE_800_primerjava.png>]
 <./slike//stand_napaka_graf2.png, id=38, 468.24937pt x 328.22626pt>
 File: ./slike//stand_napaka_graf2.png Graphic file (type png)
 <use ./slike//stand_napaka_graf2.png>
-Package pdftex.def Info: ./slike//stand_napaka_graf2.png  used on input line 96
+Package pdftex.def Info: ./slike//stand_napaka_graf2.png  used on input line 97
 .
 (pdftex.def)             Requested size: 327.77231pt x 229.7568pt.
 
-Overfull \hbox (6.1629pt too wide) in paragraph at lines 98--99
+Overfull \hbox (6.1629pt too wide) in paragraph at lines 99--100
 \OT1/cmr/m/n/12 Seveda je stan-dardna na-paka odvisna tudi od pop-u-lacijske va
 ri-ance $\OML/cmm/m/it/12 []$\OT1/cmr/m/n/12 . Manjsa
  []
 
 [7 <./slike//stand_napaka_graf1.png> <./slike//stand_napaka_graf2.png>]
 [8] [9]
-Overfull \hbox (9.05658pt too wide) detected at line 147
+Overfull \hbox (9.05658pt too wide) detected at line 148
 [] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 ;
  []
 
-[10] [11] (Stat_Seminarska.aux) ) 
+
+Overfull \hbox (1.11351pt too wide) in paragraph at lines 160--162
+\OT1/cmr/m/n/12 V nasem primer $\OML/cmm/m/it/12 []$ \OT1/cmr/m/n/12 ne poz-n
+amo, zato ra-bimo zanj pri-blizek, ki pa bo uposteval
+ []
+
+
+Overfull \hbox (3.44684pt too wide) in paragraph at lines 160--162
+\OT1/cmr/m/n/12 vzorcni vari-anci moskih in zensk. Za splosna vzorca iz dve
+h takih po-razdelitev,
+ []
+
+[10] [11] [12] [13] (Stat_Seminarska.aux) ) 
 Here is how much of TeX's memory you used:
- 1922 strings out of 479623
- 28488 string characters out of 2865098
- 318490 words of memory out of 3000000
- 19107 multiletter control sequences out of 15000+200000
- 410371 words of font info for 51 fonts, out of 3000000 for 9000
+ 2022 strings out of 479623
+ 29994 string characters out of 2865098
+ 318037 words of memory out of 3000000
+ 19193 multiletter control sequences out of 15000+200000
+ 412841 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,7n,74p,1169b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Žiga/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Žiga/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Žiga/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Žiga/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/
-Žiga/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C
-:/Users/Žiga/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb><C:/Users/Žiga/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmr12.pfb><C:/Users/Žiga/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr17.pfb><C:/Users/Žiga/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr6.pfb><C:/Users/Žiga/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Žiga/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Žiga/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Žiga/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Stat_Seminarska.pdf (11 pages, 441597 bytes).
+ 68i,11n,74p,1269b,208s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Žiga/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Žiga/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Žiga/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users
+/Žiga/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+<C:/Users/Žiga/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb><C:/Users/Žiga/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb><C:/Users/Žiga/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><C:/Users/Žiga/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmr17.pfb><C:/Users/Žiga/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Žiga/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Žiga/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Žiga/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Žiga/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Use
+rs/Žiga/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb>
+Output written on Stat_Seminarska.pdf (13 pages, 453506 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
