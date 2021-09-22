@@ -199,19 +199,117 @@ Prostostne stopnje so take kot so, ker je $\hat{\mu}_1 - \hat{\mu}_2$ povprečje
 
 \section*{3. naloga: Pulz}
 
-\subsubsection*{Točka a)} Dana je tabela meritev pulzov posameznih študentov. Vsakemu študentu so pulz izmerili dvakrat, nekateri od njih pa so bili med obema meritvama fizično obremenjeni. Zanima nas, ali je obremenitev pri študentih, ki so jo imeli, vplivala na spremembo pulza. Mislimo si, da vse prve meritve pulzov prihajajo iz neke porazdelitve s povprečjem $\mu_1$ in varianco $\sigma_1^2$, vse druge pa iz neke porazdelitve s povprečjem $\mu_2$ in z varianco $\sigma_2^2$. V luči tega lahko ničelno domnevo postavimo kot $H_0 : \mu_1 = \mu_2$. Označimo z $X_i$ prvo meritev pulza $i-tega$ študenta z obremenitvijo, z $Y_i$ pripadajočo drugo meritev in z $n$ število študentov, ki so bili deležni obremenitve. V našem primeru je $n = 46$. Smiselna testna statistika je nato $\hat{\mu_1} - \hat{\mu_2}$, kjer sta
+\subsubsection*{Točka a)} Dana je tabela meritev pulzov posameznih študentov. Vsakemu študentu so pulz izmerili dvakrat, nekateri od njih pa so bili med obema meritvama fizično obremenjeni. Zanima nas, ali je obremenitev pri študentih, ki so jo imeli, vplivala na spremembo pulza. Mislimo si, da vse prve meritve pulzov prihajajo iz neke porazdelitve s povprečjem $\mu_1$ in varianco $\sigma_1^2$, vse druge pa iz neke porazdelitve s povprečjem $\mu_2$ in z varianco $\sigma_2^2$. V luči tega lahko ničelno domnevo postavimo kot $H_0 : \mu_1 = \mu_2$. Označimo z $X_i$ prvo meritev pulza $i$-tega študenta z obremenitvijo, z $Y_i$ pripadajočo drugo meritev in z $n$ število študentov, ki so bili deležni obremenitve. V našem primeru je $n = 46$. Predpostavili bomo še, da so $X_i$ paroma neodvisne, da so $Y_i$ paroma neodvisne, in da sta $X_i$ in $Y_j$ za $i \neq j$ neodvisni. Smiselna testna statistika je nato $\hat{\mu}_1 - \hat{\mu}_2$, kjer sta
 \[
-\hat{\mu_1} = \frac{1}{n}\sum_{i=1}^nX_i, \quad
-\hat{\mu_2} = \frac{1}{n}\sum_{i=1}^nY_i.
+\hat{\mu}_1 = \frac{1}{n}\sum_{i=1}^nX_i, \quad
+\hat{\mu}_2 = \frac{1}{n}\sum_{i=1}^nY_i.
 \]
-Testa se lahko lotimo na vsaj dva načina. Problem je, ker porazdelitev, iz katerih izvirajo meritve, ne poznamo. Najbolj idealeno bi bilo, če bi bili te porazdeltvi kar normalni. Potem je
+Problem je, ker porazdelitev, iz katerih izvirajo meritve, ne poznamo. Najbolj idealno bi bilo, če bi bili te porazdelitvi kar normalni. Potem bi veljalo
 \[
 X_i - Y_i \sim N(\mu_1 - \mu_2, \sigma_1^2 + \sigma_2^2 - 2cov(X_i,Y_i)).
 \]
 V prejšnji nalogi, smo člen $-2cov(X_i,Y_i)$ opuščali, saj smo predpostavljali neodvisnost vseh meritev, verjetno pa ni najbolj smiselno predpostaviti, da sta dve meritvi pri istem človeku neodvisni, zato moramo tu upoštevati še ta člen. Sumandi $X_i - Y_i$ so za različne $i$ paroma neodvisni, $cov(X_i,Y_i)$ pa je enaka ne glede na $i$, zato sledi
 \[
-\hat{\mu_1} - \hat{\mu_2} \sim N\left(\mu_1 - \mu_2, \frac{\sigma_1^2 + \sigma_2^2 - 2cov(X_i,Y_i)}{n}\right).
+\hat{\mu}_1 - \hat{\mu}_2 \sim N\left(\mu_1 - \mu_2, \frac{\sigma_1^2 + \sigma_2^2 - 2cov(X_i,Y_i)}{n}\right).
 \]
+Označimo z $se$ standardni odklon te normalne porazdelitve. Potem je
+\[
+\frac{(\hat{\mu}_1 - \hat{\mu}_2) - (\mu_1 - \mu_2)}{se} \sim N(0,1).
+\]
+Problem je, ker $se$ ne poznamo, vendar pa lahko $se^2$ nepristransko ocenimo kot
+\[
+\hat{se}^2 = \frac{\hat{\sigma}_1^2 + \hat{\sigma}_2^2 - 2\widehat{cov}}{n},
+\]
+kjer so
+\[
+\hat{\sigma}_1^2 = \frac{1}{n-1}\sum_{i=1}^n(X_i - \hat{\mu}_1)^2, \quad
+\hat{\sigma}_1^2 = \frac{1}{n-1}\sum_{i=1}^n(Y_i - \hat{\mu}_2)^2,
+\]
+in
+\[
+\widehat{cov} = \frac{1}{n-1}\sum_{i=1}^n(X_i - \hat{\mu}_1)(Y_i - \hat{\mu}_2).
+\]
+Tedaj vemo, da je
+\[
+T = \frac{(\hat{\mu}_1 - \hat{\mu}_2) - (\mu_1 - \mu_2)}{\hat{se}} \sim Student(n-1) = Student(45).
+\]
+Če upoštevamo ničelno domnevo, je $T = \frac{(\hat{\mu}_1 - \hat{\mu}_2)}{\hat{se}}$, zato lahko test izvedemo kot v prejšnji nalogi. Alternativna hipoteza naj bo $H_1 : \mu_1 \neq \mu_2$. Potem pri $\alpha = 0,05$ zavrnemo $H_0$, če je $|T| \geq 2,02$, pri $\alpha = 0,01$ pa, če je $|T| \geq 2,69$. Ker je $|T| \doteq 5,31503$, domnevo zavrnemo pri obeh stopnjah tveganja. Kot pri prejšnji nalogi bi bilo smiselno to preizkusiti še z enostranskim testom, saj je v tem kontekstu bolj smiselna alternativna hipoteza $H_1 : \mu_2 > \mu_1$. V tem primeru $H_0$ zavrnemo pri $\alpha = 0,05$, če je $T \leq -1,68$, pri $\alpha = 0,01$ pa, če je $T \leq -2,42$. Ker je $T \doteq -5,31503$, tudi v tem primeru $H_0$ zavrnemo pri obeh stopnjah tveganja, kar pa je tudi smiselno, saj pričakujemo, da vadba zares vpliva na pulz.
+
+Za ta test smo sicer predpostavljali, da meritve $X_i$ in $Y_j$ prihajajo iz normalnih porazdelitev, vendar pa je zgornji potek v resnici utemeljen že brez te predpostavke, če uporabimo centralni limitni izrek. Spremenljivke $X_i - Y_i$ so namreč enako porazdeljene za vsak $i$ in so poleg tega paroma neodvisne. Zato v resnici res približno velja
+\[
+\hat{\mu}_1 - \hat{\mu}_2 \sim N\left(\mu_1 - \mu_2, \frac{\sigma_1^2 + \sigma_2^2 - 2cov(X_i,Y_i)}{n}\right).
+\]
+in je zato zgornji postopek v tem približku korekten.
+
+\subsubsection*{Točka b)} Pri tej točki bomo raziskali, če se nam na podlagi podatkov zdi, da je kakšen od študentov, ki so bili deležni obremenitve, goljufal in med obema meritvama sploh ni tekel na mestu. V ta namen si bomo najprej ogledali stolpični grafikon, ki prikazuje število študentov, v odvisnosti od razlike pulzov. Največja razlika pulzov pri posameznem študentu je $94$, za širino posameznega stolpca pa bomo vzeli $20$.
+\begin{center}
+\includegraphics[scale=0.70]{pulzi_studentov}
+\end{center}
+Podrobneje si bomo sedaj ogledali tiste študente, pri katerih je bila razlika pulzov strogo manjša od 20. Te lahko razvrstimo v naslednjo tabelo skupaj z vsemi relevantnimi podatki.
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c | c | c |}
+\hline
+Kadi & Alkohol & Vadba       & obremenitev & Pulz1 & Pulz2 & Leto \\
+\hline \hline
+Ne   & Pije    & Vadi veliko & Da          & 76    & 88    & 93 \\
+\hline
+Ne   & Ne Pije & Vadi zmerno & Da		   & 68    & 84    & 96 \\
+\hline
+Ne   & Pije    & Vadi zmerno & Da          & 65    & 82    & 96 \\
+\hline
+Ne   & Pije    & Vadi zmerno & Da          & 145   & 155   & 97 \\
+\hline
+\end{tabular}
+\end{center}
+Oglejmo si vsakega od teh študentov posebej. Prvi v tabeli ima zares majhno razliko v pulzih, vendar pa tudi veliko vadi, kar pomeni, da bi morda potreboval večjo obremenitev, da bi njegov pulz narastel bolj kot je. Vpliv vadbe bomo bolj natančno raziskali v naslednji točki. Pri naslednjih dveh študentih je situacija morda že bolj vprašljiva, saj ni nobenega tako prepričljivega razloga, da bi njun pulz narastel le toliko, zato bi morda lahko sklepali, da sta ta dva zares goljufala, saj razlika njunih pulzov še vedno zelo odstopa od povprečja. Če vadba nima bistvenega vpliva, potem bi enakovredno lahko sklepali, da je goljufal prvi študent. V nasprotju s tem zadnji študent skoraj sigurno ni goljufal. Podatki nam dajo misliti, da je pred merjenjem vadil že sam in je zato merjenje izvedel s povišanim pulzom. Pri višjih pulzih nasploh rabimo večjo obremenitev, da se pozna razlika, zato je smiselno, da mu od le ene minute teka na mestu pulz ni pretežno narastel.
+
+\subsubsection*{Točka c)} V prejšnji točki smo že videli, da smo za študente beležili tudi koliko vadijo. V tej točki pa nas bo zanimalo, ali vadba pri študentih, ki so bili deležni obremenitve, vpliva na spremembo pulza. Glede na nivo vadbe smo študente tako razdelili v tri skupine. Prva skupina vadi veliko, druga zmerno in tretja malo ali pa sploh ne. Ker imamo tri skupine, bomo morali narediti tri primerjave. Za začetek vpeljimo nekaj oznak. Z $X_i^{(j)}$ bomo označilli prvo meritev, z $Y_i^{(j)}$ pa drugo meritev $i$-tega študenta iz $j$-te skupine. Poleg tega bomo velikosti posameznih skupin označili z $n_1$, $n_2$, $n_3$. Sedaj lahko ocenimo povprečja razlik pulzov v posamezni skupini:
+\[
+\hat{\mu}^{(1)} = \frac{1}{n_1}\sum_{i=1}^{n_1} \left(X_i^{(1)} - Y_i^{(1)}\right),
+\]
+\[
+\hat{\mu}^{(2)} = \frac{1}{n_2}\sum_{i=1}^{n_2} \left(X_i^{(2)} - Y_i^{(2)}\right),
+\]
+\[ 
+\hat{\mu}^{(3)} = \frac{1}{n_3}\sum_{i=1}^{n_3} \left(X_i^{(3)} - Y_i^{(3)}\right).
+\]
+Ta obravnava se razlikuje od tiste v prvi točki, saj v resnici tle ne predpostavljamo, da so $Y_i^{(j)}$ vsi enako porazdeljeni. Da ima ta naloga sploh smisel, moramo namreč dovoliti, da za različni skupini druge meritve lahko prihajajo iz različnih porazdelitev. Za $X_i^{(j)}$ bomo še vedno predpostavljali, da vse prihajajo iz iste porazdelitve, saj predvidevamo, da bo vadba k razliki prispevala le po teku na mestu. Za začetek se omejimo na primerjavo skupin $1$ in $2$. Ničelno domnevo postavimo kot $H_0 : \mu^{(1)} = \mu^{(2)}$, kjer je $\mu^{(1)}$ pravo povprečje porazdelitve, iz katere izvirajo $X_i^{(1)} - Y_i^{(1)}$, $\mu^{(2)}$ pa pravo povprečje porazdelitve, iz katere izvirajo $X_i^{(2)} - Y_i^{(2)}$. Smiselna testna statistika bi potem bila na primer $\hat{\mu}^{(1)} - \hat{\mu}^{(2)}$, od katere pa še ne poznamo porazdelitve. Tu ne moremo preprosto normalno aproksimirati, saj niso vsi sumandi enako porazdeljeni, lahko pa aproksimiramo posebej $\hat{\mu}^{(1)}$ in posebej $\hat{\mu}^{(2)}$, nato pa izračunamo porazdelitev vsote teh aproksimacij. Tako je približno
+\[
+\hat{\mu}^{(1)} \sim N\left(\mu^{(1)}, \frac{\sigma_{(1)}^2}{n_1}\right), \quad \hat{\mu}^{(2)} \sim N\left(\mu^{(2)}, \frac{\sigma_{(2)}^2}{n_2}\right),
+\]
+kjer sta $\sigma_{(1)}^2$ in $\sigma_{(2)}^2$ varianci, ki pripadata $X_i^{(1)} - Y_i^{(1)}$ in $X_i^{(2)} - Y_i^{(2)}$. Tedaj je približno
+\[
+\frac{(\hat{\mu}^{(1)} - \hat{\mu}^{(2)}) - (\mu^{(1)} - \mu^{(2)})}{\sqrt{\frac{\sigma_{(1)}^2}{n_1} + \frac{\sigma_{(2)}^2}{n_2}}} \sim N(0,1).
+\]
+Sedaj bi lahko nepristransko ocenili imenovalec in znova izvedli Studentov test, vendar pa ta metoda, ki jo trenutno opazujemo, ni najboljša, ker so $n_1 = 7$, $n_2 = 25$, $n_3 = 14$. Vzorci s katerimi delami so torej zelo majhni in zato taka normalna aproksimacija verjetno ne bo najbolša. Druga možnost je, da bi uporabili močnejšo različico centralnega limitnega izreka, ki pravi, da normalna aproksimacija deluje tudi, če niso vse spremenljivke enako porazdeljene, ampak je tudi natančnost te vprašljiva. Skratka, na ta način nastane veliko težav, zato se bomo celotnega problema lotili drugače.
+
+Poznamo še en način, kako preverjati ali so povprečja večih porazdelitev enaka, ki mu pravimo \emph{analiza variance}. Osnovna metoda je sicer zastavljena za skupine istih velikosti, vendar pa se to zlahka priredi tudi za skupine različnih velikosti. Za uporabo te metode moramo določene stvari še predpostaviti. Naše meritve bomo za namen te metode modelirali kot
+\[
+Z_{ji} = X_i^{(j)} - Y_i^{(j)} = \mu + \alpha_j + \epsilon_{ji},
+\]
+pri čemer je $\mu$ skupno povprečje, $\alpha_j$ je \emph{efekt skupine j}, $\epsilon_{ij} \sim N(0, \sigma^2)$ pa je šum. Poleg tega predpostavljamo, da so šumi paroma neodvisni. Predstavljamo si lahko, da šum nastane pri merjenju pulza z napravo. Poleg tega dodamo še pogoj $\alpha_1 + \alpha_2 + \alpha_3 = 0$. Z $J$ označimo število skupin, z $I_j$ pa število meritev v $j$-ti skupini. Analiza variance temelji na naslednji formuli:
+\[
+\sum_{j=1}^J\sum_{i=1}^{I_j}(Z_{ji} - \bar{Z}_{..})^2 = \sum_{j=1}^J\sum_{i=1}^{I_j}(Z_{ji} - \bar{Z}_{.j})^2 + \sum_{j=1}^JI_j(\bar{Z}_{.j} - \bar{Z}_{..})^2,
+\]
+pri čemer sta
+\[
+\bar{Z}_{.j} = \frac{1}{I_j}\sum_{i=1}^{I_j} Z_{ij}, \quad \bar{Z}_{..} = \frac{1}{\sum_{j=1}^JI_k}\sum_{j=1}^J\sum_{i=1}^{I_j}Z_ij.
+\]
+Označimo
+\[
+SS_W = \sum_{j=1}^J\sum_{i=1}^{I_j}(Z_{ji} - \bar{Z}_{.j})^2, \quad SS_B = \sum_{j=1}^JI_j(\bar{Z}_{.j} - \bar{Z}_{..})^2.
+\]
+$SS_W$ je \emph{nepojasnjena varianca}, $SS_B$ pa \emph{pojasnjena varianca}.
+Na podlagi tega lahko sedaj definiramo testno statistiko
+\[
+F = \frac{SS_B / (J-1)}{SS_W / \sum_{j=1}^J(I_j - 1)}.
+\]
+Izkaže se, da sta $SS_B$ in $SS_W$ hi-kvadrat porazdeljeni. Prva z $J-1$ prostostnimi stopjami, druga pa z $\sum_{j=1}^J(I_j - 1)$ prostostnimi stopnjami. Zato je
+\[
+F \sim Fischer(J-1, \sum_{j=1}^J(I_j - 1)).
+\]
+To sedaj lahko izkoristimo za testiranje domneve $H_0: \mu^{(1)} = \mu^{(2)} = \mu^{(3)}$. Tega se bomo lotili tako, da bomo izračunali $p$-vrednost opažanja. Domnevo bomo zavrnili natanko tedaj, ko bo $p$-vrednost $\leq \alpha$, kjer je $\alpha$ dana stopnja tveganja. Izračun nam na danih podatkih pove, da je $p$-vrednost enaka približno $0,90652$, kar pomeni, da tako pri $\alpha = 0,05$ kot pri $\alpha = 0,01$ domnevo sprejmemo. Torej sklepamo, da vadba nima nekega bistvenega vpliva na spremembo pulza.
+
 
 \begin{thebibliography}{99}
 \bibitem{Rice} J. A.~Rice, \emph{Mathematical Statistics and Data Analysis, Third Edition}, Thomson Brooks/Cole, Duxbury, 2007
